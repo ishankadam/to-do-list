@@ -1,0 +1,32 @@
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-wrapper h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.header-wrapper .MuiFormControl-root,
+.header-wrapper .MuiTextField-root {
+  width: 20%; /* Adjust the width as needed */
+  margin-bottom: 0;
+}
+
+.header-wrapper .MuiButton-root {
+  margin-left: auto;
+  height: 40px;
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.header-wrapper .MuiButton-root:hover {
+  background-color: #1565c0;
+}

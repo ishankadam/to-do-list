@@ -1,0 +1,33 @@
+.login-container {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between elements (you can adjust this value) */
+  width: 100%;
+  max-width: 400px; /* Adjust max width based on design needs */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between form fields */
+}
+
+.login-typography {
+  text-align: center;
+}
+
+.sign-up-link {
+  text-align: center;
+  margin-top: 8px; /* Add space above the link */
+}
+
+.login-button {
+  margin-top: 24px; /* Space above the button */
+}

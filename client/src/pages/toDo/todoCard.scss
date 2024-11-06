@@ -1,0 +1,63 @@
+.todo-card {
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 380px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .MuiCardContent-root {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h5 {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .MuiTypography-h5 {
+      &.MuiTypography-colorPrimary {
+        color: #1976d2;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+    .MuiTypography-body2 {
+      margin-bottom: 8px;
+      color: #555;
+
+      strong {
+        color: #333;
+      }
+    }
+
+    .comments {
+      margin-top: 15px;
+      font-size: 0.9rem;
+
+      ul {
+        padding-left: 20px;
+        list-style-type: disc;
+        max-height: 100px;
+        overflow-y: auto;
+
+        li {
+          margin-bottom: 5px;
+
+          strong {
+            color: #0073e6;
+          }
+        }
+      }
+    }
+  }
+}

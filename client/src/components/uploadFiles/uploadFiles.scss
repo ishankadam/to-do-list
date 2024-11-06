@@ -1,0 +1,91 @@
+/* Main container for file upload */
+#form-file-upload {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+/* Change background when dragging a file */
+#form-file-upload.drag-active {
+  background-color: #e0f7fa;
+  border-color: #00acc1;
+}
+
+/* Hidden input field */
+#input-file-upload {
+  display: none;
+}
+
+/* Label that holds the drag/drop text and button */
+#label-file-upload {
+  cursor: pointer;
+}
+
+/* Styling for the "Upload a file" button */
+.upload-button {
+  color: #f36b21;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* File attachment name display with close icon */
+.attachment-filename {
+  max-width: 100% !important;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 1px solid #ddd; */
+  border-radius: 4px;
+}
+
+/* Close icon */
+.attachment-filename .MuiSvgIcon-root {
+  cursor: pointer;
+  color: #ff1744;
+}
+
+/* Image container for file preview */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.attachment-file {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Overlay for the download button */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 4px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Download button */
+.download-icon {
+  color: white;
+}

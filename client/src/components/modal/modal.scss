@@ -1,0 +1,97 @@
+.common-modal {
+  display: flex;
+  flex-direction: column;
+  outline: none !important;
+  background-color: white !important;
+  border: 2px solid #000; /* Corrected the border property */
+  padding: 1.625rem;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+
+  .modal-btm-btn-container {
+    margin-left: auto;
+  }
+
+  .modal-close-icon {
+    margin-right: -5px !important;
+    margin-left: 1rem !important;
+    cursor: pointer;
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between; /* Center header content if needed */
+  margin-bottom: 10px;
+}
+
+.todo-form-modal {
+  margin-top: 50px;
+  max-height: 35rem;
+  max-width: 35rem;
+  overflow-y: auto; /* Allow vertical overflow if content exceeds */
+  .modal-body {
+    border-radius: 8px 8px 0 0;
+    .muiTableContainer-root {
+      margin: 0;
+    }
+  }
+}
+
+.createtodo-container {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  height: 100%; /* Full viewport height */
+  overflow: auto;
+}
+
+.createtodo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between elements */
+  width: 100%;
+  max-width: 500px; /* Adjust max width based on design needs */
+  margin: 10px 0;
+}
+
+.createtodo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form fields */
+}
+
+.createtodo-button {
+  margin-top: 24px; /* Space above the button */
+}
+
+.modal-btm-btn-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 16px; /* Add some space above the buttons */
+}
+
+.modal-btm-btn-container button {
+  margin-left: 8px; /* Add space between buttons */
+}
+
+.modal-narrow {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1.625rem;
+  max-width: 90vw; /* Adjust width as needed */
+  min-width: 300px; /* Ensure minimum width for responsiveness */
+  max-height: 90vh; /* Adjust height as needed */
+  // min-height: 200px; /* Ensure minimum height for responsiveness */
+  overflow-y: auto;
+  z-index: 1000; /* Ensure modal is on top */
+}

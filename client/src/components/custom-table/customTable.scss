@@ -1,0 +1,24 @@
+/* CustomTable.scss */
+
+.job-table-header {
+  background-color: #4d92d7;
+  color: white;
+
+  th {
+    border: 1px solid #e0e0e0; /* Light grey border for table header cells */
+    border-radius: 2%;
+    font-weight: bold;
+  }
+}
+
+.MuiTableRow-root {
+  td {
+    border-bottom: 1px solid #e0e0e0; /* Light grey border for table rows */
+    border-radius: 2%;
+  }
+}
+
+/* Optional: Add hover effect for rows */
+.MuiTableSortLabel-icon {
+  opacity: 1 !important; /* Force visibility */
+}

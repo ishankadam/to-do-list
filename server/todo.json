@@ -1,0 +1,60 @@
+[
+  {
+    "todoId": 1,
+    "title": "Complete Project Documentation",
+    "description": "Finalize and submit the project documentation for review.",
+    "dueDate": "2024-11-10",
+    "Priority": "High",
+    "assignedTo": "John Doe",
+    "Status": "In Progress",
+    "comments": [
+      { "user": "Jane Smith", "comment": "Please add the API details." },
+      { "user": "John Doe", "comment": "Working on it." }
+    ]
+  },
+  {
+    "todoId": 2,
+    "title": "Update Database Schema",
+    "description": "Refactor and update the database schema for the new requirements.",
+    "dueDate": "2024-11-15",
+    "Priority": "Medium",
+    "assignedTo": "Jane Smith",
+    "Status": "Not Started",
+    "comments": []
+  },
+  {
+    "todoId": 3,
+    "title": "Fix Login Bug",
+    "description": "Investigate and resolve the login bug reported by QA team.",
+    "dueDate": "2024-11-08",
+    "Priority": "High",
+    "assignedTo": "Mike Johnson",
+    "Status": "In Progress",
+    "comments": [
+      { "user": "QA Team", "comment": "The issue occurs with multiple users." },
+      { "user": "Mike Johnson", "comment": "Looking into it now." }
+    ]
+  },
+  {
+    "todoId": 4,
+    "title": "Design Landing Page",
+    "description": "Create a mockup for the new landing page based on the provided wireframe.",
+    "dueDate": "2024-11-20",
+    "Priority": "Low",
+    "assignedTo": "Sarah Lee",
+    "Status": "Not Started",
+    "comments": []
+  },
+  {
+    "todoId": 5,
+    "title": "Prepare Monthly Report",
+    "description": "Compile and analyze data for the monthly performance report.",
+    "dueDate": "2024-11-25",
+    "Priority": "Medium",
+    "assignedTo": "Alex Kim",
+    "Status": "Pending Review",
+    "comments": [
+      { "user": "Alex Kim", "comment": "Report draft is ready for review." }
+    ]
+  }
+]
