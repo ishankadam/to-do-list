@@ -8,7 +8,9 @@ import ToDoForm from "../../components/modal/todoForm";
 import SelectDropdown from "../../components/select-dropdown/selectDropdown";
 import { todoStatus } from "../../common";
 import Textfield from "../../components/textfield/textfield";
+import { useNavigate } from "react-router-dom";
 const Dashboard = ({ socket }) => {
+  const navigate = useNavigate();
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [filterArray, setFilterArray] = useState({
@@ -39,6 +41,7 @@ const Dashboard = ({ socket }) => {
     getAllTodos({
       setTodos,
       employeeId: localStorage.getItem("employeeId"),
+      navigate,
     });
 
     socket.on("taskCreated", (newTodo) => {
@@ -68,7 +71,7 @@ const Dashboard = ({ socket }) => {
   }, []);
 
   useEffect(() => {
-    getAllEmployees({ setEmployees: setEmployeeArray });
+    getAllEmployees({ setEmployees: setEmployeeArray, navigate });
     const role = localStorage.getItem("role");
     setUserRole(role);
 

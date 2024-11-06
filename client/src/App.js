@@ -7,6 +7,7 @@ import Signup from "./pages/signup/signup";
 import Dashboard from "./pages/dashboard/dashboard";
 import io from "socket.io-client";
 import { useEffect } from "react";
+import NotFound from "./pages/notfound/notFound";
 
 const App = () => {
   const socket = io("http://localhost:5000", {
@@ -37,6 +38,7 @@ const App = () => {
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/" element={<Dashboard socket={socket} />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

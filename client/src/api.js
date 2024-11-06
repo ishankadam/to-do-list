@@ -51,7 +51,7 @@ export const login = async (user, error, setError) => {
   }
 };
 
-export const getAllTodos = async ({ setTodos, employeeId }) => {
+export const getAllTodos = async ({ setTodos, employeeId, navigate }) => {
   const authToken = getToken();
   const requestOptions = {
     method: "POST",
@@ -70,6 +70,7 @@ export const getAllTodos = async ({ setTodos, employeeId }) => {
       } else {
         if (response.status === 401) {
           console.log("error");
+          navigate("/login");
         }
       }
     })
@@ -81,7 +82,7 @@ export const getAllTodos = async ({ setTodos, employeeId }) => {
     });
 };
 
-export const getAllEmployees = async ({ setEmployees }) => {
+export const getAllEmployees = async ({ setEmployees, navigate }) => {
   const authToken = getToken();
   const requestOptions = {
     method: "GET",
@@ -97,6 +98,7 @@ export const getAllEmployees = async ({ setEmployees }) => {
       } else {
         if (response.status === 401) {
           console.log("error");
+          navigate("/login");
         }
       }
     })
