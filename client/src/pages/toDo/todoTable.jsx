@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../components/custom-table/customTable";
 import { deleteTodo } from "../../api";
+import { Alert, Snackbar } from "@mui/material";
 
 const TodoTable = (props) => {
   const [todos, setTodos] = useState(props.todos || []);
-
+  const [snackbarDetails, setSnackbarDetails] = useState({
+    open: false,
+    message: "",
+  });
   useEffect(() => {
     setTodos(props.todos);
   }, [props.todos]);
@@ -21,7 +25,19 @@ const TodoTable = (props) => {
     });
   };
   const handleDeleteTodo = (todo) => {
-    deleteTodo({ todo, setLoading: props.setLoading, setTodo: props.setTodos });
+    deleteTodo({
+      todo,
+      setLoading: props.setLoading,
+      setTodo: props.setTodos,
+      setSnackbarDetails,
+    });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarDetails({
+      open: false,
+      message: "",
+    });
   };
 
   const handleEditTodo = (row) => {
@@ -114,6 +130,25 @@ const TodoTable = (props) => {
           loading={false}
           handleEditTodo={handleEditTodo}
         ></CustomTable>
+        <Snackbar
+          open={snackbarDetails.open}
+          autoHideDuration={5000}
+          onClose={handleCloseSnackbar}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        >
+          <Alert
+            onClose={handleCloseSnackbar}
+            severity="success"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor: "#4caf50",
+              color: "#000",
+            }}
+          >
+            {snackbarDetails.message}
+          </Alert>
+        </Snackbar>
       </div>
     </>
   );

@@ -100,6 +100,7 @@ const get_all_employees = async (req, res) => {
 const create_Todo = async (req, res) => {
   try {
     const todoData = JSON.parse(req.body.todo);
+    const uploadedFile = req.file;
 
     if (typeof todoData !== "object" || todoData === null) {
       return res.status(400).send({ error: "Invalid data format." });

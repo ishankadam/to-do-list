@@ -214,7 +214,12 @@ export const editTodo = async ({ todo, setTodo, setLoading }) => {
   }
 };
 
-export const deleteTodo = async ({ todo, setLoading, setTodo }) => {
+export const deleteTodo = async ({
+  todo,
+  setLoading,
+  setTodo,
+  setSnackbarDetails,
+}) => {
   const authToken = getToken();
   const requestOptions = {
     method: "DELETE",
@@ -233,6 +238,10 @@ export const deleteTodo = async ({ todo, setLoading, setTodo }) => {
       const data = await response.json();
       setTodo(data);
       setLoading(false);
+      setSnackbarDetails({
+        open: true,
+        message: `To-do Deleted Successfully!`,
+      });
     } else {
       const errorData = await response.json();
       console.error("Error:", errorData);

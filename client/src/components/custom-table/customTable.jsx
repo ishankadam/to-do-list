@@ -19,7 +19,13 @@ import EditIcon from "@mui/icons-material/Edit";
 import CommentIcon from "@mui/icons-material/Comment";
 import ConfirmationModal from "../modal/confirmation-modal";
 import moment from "moment";
-import { findLabelByValue, getChipColor, getStatusStyle } from "../../common";
+import {
+  findLabelByValue,
+  getChipColor,
+  getStatusStyle,
+  priority,
+  todoStatus,
+} from "../../common";
 import ViewTodo from "../modal/viewTodo";
 
 const CustomTable = (props) => {
@@ -104,7 +110,7 @@ const CustomTable = (props) => {
       case "textColor":
         children = (
           <Typography sx={getStatusStyle(row[colDef.key])}>
-            {row[colDef.key]}
+            {findLabelByValue(todoStatus, row[colDef.key])}
           </Typography>
         );
         break;
@@ -112,7 +118,7 @@ const CustomTable = (props) => {
         const { color } = getChipColor(row[colDef.key]);
         children = (
           <Chip
-            label={row[colDef.key]}
+            label={findLabelByValue(priority, row[colDef.key])}
             color={color}
             variant="contained"
             style={{ margin: "4px" }}
